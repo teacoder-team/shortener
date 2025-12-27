@@ -14,7 +14,7 @@ COPY tsconfig.json ./
 
 RUN bun prisma generate
 
-RUN bun run build
+RUN bun build src/server.ts --outdir dist --target=bun
 
 FROM oven/bun:latest AS runtime
 WORKDIR /app
