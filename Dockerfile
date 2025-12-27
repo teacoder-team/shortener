@@ -14,9 +14,9 @@ COPY src ./src
 COPY prisma.config.ts ./
 COPY tsconfig.json ./
 
-RUN bunx prisma generate
+RUN bun prisma generate
 
-RUN bun build src/server.ts --outdir dist
+RUN bun run build
 
 FROM oven/bun:1.1.8-slim AS runtime
 
