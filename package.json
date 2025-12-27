@@ -1,0 +1,30 @@
+{
+	"name": "shortener",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"author": "TeaCoder",
+	"scripts": {
+		"dev": "bunx tsx watch src/server.ts",
+		"build": "bun build src/server.ts --outdir dist",
+		"start": "bun dist/server.js"
+	},
+	"private": true,
+	"devDependencies": {
+		"@types/bun": "latest",
+		"@types/node": "^25.0.3",
+		"tsx": "^4.21.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5.9.3"
+	},
+	"dependencies": {
+		"@fastify/env": "^5.0.3",
+		"@fastify/sensible": "^6.0.4",
+		"@prisma/adapter-pg": "^7.2.0",
+		"@prisma/client": "^7.2.0",
+		"fastify": "^5.6.2",
+		"nanoid": "^5.1.6",
+		"prisma": "^7.2.0"
+	}
+}
